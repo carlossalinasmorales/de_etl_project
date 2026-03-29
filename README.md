@@ -8,4 +8,4 @@ Monorepo para el diplomado de Data Engineer de la Universidad de Santiago de Chi
 
 Pipeline ETL básico en Bash que procesa el dataset Titanic para contar pasajeros por clase.
 
-Ver [bash-mini-etl/README.md](bash_mini_etl/README.md) para más detalles.
+Ver [bash-mini-etl/README.md](./bash_mini_etl/README.md) para más detalles.
