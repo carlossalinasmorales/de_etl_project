@@ -1,4 +1,3 @@
 .venv
 .ipynb_checkpoints/
-data/output/resumen.csv
 !data/output/.gitkeep
