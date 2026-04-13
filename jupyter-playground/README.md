@@ -9,7 +9,7 @@ Playground de práctica con Python, pandas, NumPy y notebooks de Jupyter.
 - Entorno virtual local en `.venv/`
 - Dependencias declaradas en `pyproject.toml`
 - Resolución reproducible en `uv.lock`
-- Kernel de Jupyter del proyecto: `Python (.venv) jupyter-playground`
+- VS Code configurado para usar `${workspaceFolder}/.venv/bin/python`
 
 ## Requisitos
 
@@ -43,11 +43,15 @@ uv run jupyter notebook
 
 ## Kernel correcto
 
-En Jupyter o VS Code, seleccioná este kernel:
+En VS Code, usá el intérprete `.venv` del proyecto.
+
+El workspace ya viene configurado para apuntar a:
 
 ```text
-Python (.venv) jupyter-playground
+${workspaceFolder}/.venv/bin/python
 ```
+
+Si abrís un notebook y te pide kernel, elegí el `.venv` detectado por VS Code.
 
 ## Comandos útiles
 
@@ -81,6 +85,19 @@ uv run ruff check .
 uv run ruff check . --fix
 ```
 
+### Auditar vulnerabilidades conocidas
+
+```bash
+uv run pip-audit --local
+```
+
+### Actualizar dependencias del lockfile
+
+```bash
+uv lock --upgrade
+uv sync --dev
+```
+
 ## Estructura importante
 
 ```text
@@ -101,3 +118,21 @@ La configuración oficial del entorno vive en:
 - `uv.lock`
 
 `requirements.txt` ya no forma parte del flujo recomendado.
+
+## Flujo recomendado
+
+### Diario
+
+```bash
+uv sync --dev
+uv run jupyter lab
+uv run ruff check .
+```
+
+### Mantenimiento
+
+```bash
+uv run pip-audit --local
+uv lock --upgrade
+uv sync --dev
+```
