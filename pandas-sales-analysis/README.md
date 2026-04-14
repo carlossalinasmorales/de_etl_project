@@ -1,30 +1,38 @@
 # Pandas Sales Analysis
 
-Pequeno proyecto de analisis de ventas con `pandas` usando un notebook de Jupyter.
+![Python](https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-CSV%20Processing-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-## Objetivo
+Proyecto práctico de análisis de ventas con **pandas** sobre un dataset CSV.
 
-Procesar el archivo `Ventas.csv` para responder preguntas basicas de analisis de datos:
+## Executive Summary
 
-- lectura e inspeccion del dataset
-- seleccion y filtrado de columnas
-- calculo de ventas totales
-- agregaciones por zona y producto
-- generacion de un archivo resumen en CSV
+Este módulo toma un archivo de transacciones (`Ventas.csv`) y construye un resumen tabular que consolida:
 
-## Archivos
+- ventas por zona,
+- ventas por producto,
+- métricas generales del día.
 
-- `analisis-ventas.ipynb`: notebook principal con el desarrollo del ejercicio
-- `data/raw/Ventas.csv`: datos de entrada
-- `data/output/`: carpeta de salida para archivos generados
-- `requirements.txt`: dependencias minimas del proyecto
+Es evidencia de workflow analítico completo: lectura, transformación, agregación y exportación de resultados.
 
-## Requisitos
+## Tech Stack
 
-- Python 3
-- Jupyter Notebook o VS Code con soporte para notebooks
+`Python` · `pandas` · `Jupyter Notebook`
 
-Instalacion basica:
+## Project Structure
+
+```text
+.
+├── analisis-ventas.ipynb
+├── data/
+│   ├── raw/Ventas.csv
+│   └── output/
+├── requirements.txt
+└── README.md
+```
+
+## Quick Start
 
 ```bash
 python3 -m venv .venv
@@ -32,25 +40,28 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Uso
+Después abrí `analisis-ventas.ipynb` y ejecutá las celdas en orden.
 
-1. Abrir `analisis-ventas.ipynb`.
-2. Ejecutar las celdas en orden.
-3. El resultado final genera `data/output/resumen.csv`.
+## Expected Output
 
-## Salida esperada
-
-El archivo `resumen.csv` contiene tres columnas:
+El notebook genera `data/output/resumen.csv` con columnas:
 
 - `Descripcion`
 - `Valor`
 - `Tipo`
 
-Incluye:
+El archivo consolida:
 
-- suma de ventas por zona
-- suma de ventas por producto
-- total de ventas del dia
-- cantidad de registros
+- suma de ventas por zona,
+- suma de ventas por producto,
+- total de ventas,
+- cantidad de registros.
 
-Los valores monetarios se exportan con formato `$` y punto como separador de miles.
+## Why this project matters
+
+Transformar datos transaccionales en un resumen accionable es una habilidad base en cualquier rol de datos. Este proyecto muestra ese flujo de punta a punta en formato simple y legible.
+
+## Notes
+
+- La dependencia declarada en `requirements.txt` es `pandas`.
+- El resultado final se exporta en CSV para facilitar consumo posterior.

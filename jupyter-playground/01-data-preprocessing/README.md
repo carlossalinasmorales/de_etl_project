@@ -1,139 +1,69 @@
-# 01-data-preprocessing
+# 01 · Data Preprocessing
 
-Curso/playground de práctica con Python, pandas, NumPy y notebooks de Jupyter.
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-2.2.3-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/JupyterLab-4.4+-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-## Stack y convenciones
+Track práctico de preprocesamiento con notebooks para consolidar fundamentos de Python y análisis de datos.
 
-- Python `3.12.3`
-- Gestión de dependencias con `uv`
-- Entorno virtual local en `.venv/`
-- Dependencias declaradas en `pyproject.toml`
-- Resolución reproducible en `uv.lock`
-- VS Code configurado para usar `${workspaceFolder}/.venv/bin/python`
+## Executive Summary
 
-## Requisitos
+Este módulo reúne ejercicios progresivos para trabajar capacidades clave de entrada en Data Engineering:
 
-- Tener `uv` instalado
+- estructuras y control de flujo en Python,
+- manipulación tabular con `pandas`,
+- exploración inicial de datos (EDA),
+- lectura/escritura de archivos en escenarios de laboratorio.
 
-## Setup inicial
+El foco está en base técnica reproducible y ordenada, no en demos aisladas.
 
-Desde este directorio (`01-data-preprocessing/`):
+## Tech Stack
+
+`Python 3.12` · `pandas` · `NumPy` · `JupyterLab` · `uv` · `ruff` · `pip-audit`
+
+## Quick Start
+
+Desde este directorio:
 
 ```bash
 uv sync --dev
-```
-
-Esto:
-
-- crea o actualiza `.venv/`
-- instala dependencias de runtime y desarrollo
-- respeta `.python-version`
-
-## Ejecutar Jupyter
-
-```bash
 uv run jupyter lab
 ```
 
-Si usás Notebook clásico:
+Si trabajás en VS Code, también podés abrir directamente los `.ipynb` usando el kernel del `.venv`.
 
-```bash
-uv run jupyter notebook
-```
+## Notebook Map
 
-## Kernel correcto
+- `01-introduccion.ipynb`
+- `02-estructuras-de-datos.ipynb`
+- `03-estructuras-de-control.ipynb`
+- `04-funciones.ipynb`
+- `05-pandas.ipynb` y `05-pandas-ejercicio.ipynb`
+- `06-eda.ipynb`
+- `07-archivos.ipynb`
+- `08-numpy.ipynb` y `08-numpy_imagen.ipynb`
+- `09-api.ipynb`
 
-En VS Code, usá el intérprete `.venv` del curso.
+## Environment Conventions
 
-El workspace del curso está configurado para apuntar a:
+- Entorno virtual local en `.venv/`.
+- Dependencias declaradas en `pyproject.toml` y congeladas en `uv.lock`.
+- Versión de Python acotada por `.python-version` y `requires-python`.
+- VS Code configurado para usar `${workspaceFolder}/.venv/bin/python`.
 
-```text
-${workspaceFolder}/.venv/bin/python
-```
-
-Si abrís un notebook y te pide kernel, elegí el `.venv` detectado por VS Code.
-
-## Comandos útiles
-
-### Abrir un intérprete Python
-
-```bash
-uv run python
-```
-
-### Agregar una dependencia de runtime
-
-```bash
-uv add <paquete>
-```
-
-### Agregar una dependencia de desarrollo
-
-```bash
-uv add --dev <paquete>
-```
-
-### Ejecutar Ruff
+## Quality Commands
 
 ```bash
 uv run ruff check .
-```
-
-### Formatear imports y corregir cosas simples
-
-```bash
 uv run ruff check . --fix
-```
-
-### Auditar vulnerabilidades conocidas
-
-```bash
 uv run pip-audit --local
 ```
 
-### Actualizar dependencias del lockfile
+## Why this project matters
 
-```bash
-uv lock --upgrade
-uv sync --dev
-```
+Antes de diseñar pipelines complejos, hay que dominar limpieza y comprensión de datos. Este track evidencia ese cimiento técnico.
 
-## Estructura importante
+## Notes
 
-```text
-.
-├── .python-version
-├── .venv/
-├── .vscode/settings.json
-├── pyproject.toml
-├── uv.lock
-├── data/
-└── *.ipynb
-```
-
-## Fuente de verdad del proyecto
-
-La configuración oficial del entorno vive en:
-
-- `pyproject.toml`
-- `uv.lock`
-
-`requirements.txt` no forma parte del flujo recomendado.
-
-## Flujo recomendado
-
-### Diario
-
-```bash
-uv sync --dev
-uv run jupyter lab
-uv run ruff check .
-```
-
-### Mantenimiento
-
-```bash
-uv run pip-audit --local
-uv lock --upgrade
-uv sync --dev
-```
+- La fuente de verdad del entorno es `pyproject.toml` + `uv.lock`.
+- `requirements.txt` no forma parte del flujo recomendado en este módulo.

@@ -37,7 +37,7 @@ La idea NO es mostrar solo notebooks sueltos, sino evidencia de criterio técnic
 | `bash-mini-etl` | Pipeline ETL básico sobre Titanic con extracción, transformación y salida procesada. | Bash, `wget` | [README](bash-mini-etl/README.md) |
 | `jupyter-playground` | Playground de notebooks para preprocesamiento y ejercicios de datos. | Python, Jupyter, `uv` | [README](jupyter-playground/README.md) |
 | `pandas-sales-analysis` | Análisis de ventas desde CSV con generación de resumen procesado. | Python, pandas, Jupyter | [README](pandas-sales-analysis/README.md) |
-| `postgres-basic-querys` | Práctica de consultas SQL sobre `dvdrental`. | PostgreSQL, SQL | [README](postgres-basic-querys/README.md) |
+| `postgres-basic-queries` | Práctica de consultas SQL sobre `dvdrental`. | PostgreSQL, SQL | [README](postgres-basic-queries/README.md) |
 
 ## Repository Structure
 
@@ -46,7 +46,7 @@ La idea NO es mostrar solo notebooks sueltos, sino evidencia de criterio técnic
 ├── bash-mini-etl/
 ├── jupyter-playground/
 ├── pandas-sales-analysis/
-├── postgres-basic-querys/
+├── postgres-basic-queries/
 └── README.md
 ```
 
@@ -71,7 +71,7 @@ Después, elegí el módulo que quieras revisar y seguí su README específico:
 - [bash-mini-etl](bash-mini-etl/README.md)
 - [jupyter-playground](jupyter-playground/README.md)
 - [pandas-sales-analysis](pandas-sales-analysis/README.md)
-- [postgres-basic-querys](postgres-basic-querys/README.md)
+- [postgres-basic-queries](postgres-basic-queries/README.md)
 
 ## Requirements
 
