@@ -1,138 +1,34 @@
 # jupyter-playground
 
-Playground de práctica con Python, pandas, NumPy y notebooks de Jupyter.
+Monorepo de cursos y playgrounds de Data Engineering con notebooks de Jupyter.
 
-## Stack y convenciones
+## Estructura
 
-- Python `3.12.3`
-- Gestión de dependencias con `uv`
-- Entorno virtual local en `.venv/`
-- Dependencias declaradas en `pyproject.toml`
-- Resolución reproducible en `uv.lock`
-- VS Code configurado para usar `${workspaceFolder}/.venv/bin/python`
-
-## Requisitos
-
-- Tener `uv` instalado
-
-## Setup inicial
-
-Desde la raíz del proyecto:
-
-```bash
-uv sync --dev
-```
-
-Esto:
-
-- crea o actualiza `.venv/`
-- instala dependencias de runtime y desarrollo
-- respeta `.python-version`
-
-## Ejecutar Jupyter
-
-```bash
-uv run jupyter lab
-```
-
-Si usás Notebook clásico:
-
-```bash
-uv run jupyter notebook
-```
-
-## Kernel correcto
-
-En VS Code, usá el intérprete `.venv` del proyecto.
-
-El workspace ya viene configurado para apuntar a:
-
-```text
-${workspaceFolder}/.venv/bin/python
-```
-
-Si abrís un notebook y te pide kernel, elegí el `.venv` detectado por VS Code.
-
-## Comandos útiles
-
-### Abrir un intérprete Python
-
-```bash
-uv run python
-```
-
-### Agregar una dependencia de runtime
-
-```bash
-uv add <paquete>
-```
-
-### Agregar una dependencia de desarrollo
-
-```bash
-uv add --dev <paquete>
-```
-
-### Ejecutar Ruff
-
-```bash
-uv run ruff check .
-```
-
-### Formatear imports y corregir cosas simples
-
-```bash
-uv run ruff check . --fix
-```
-
-### Auditar vulnerabilidades conocidas
-
-```bash
-uv run pip-audit --local
-```
-
-### Actualizar dependencias del lockfile
-
-```bash
-uv lock --upgrade
-uv sync --dev
-```
-
-## Estructura importante
+Cada curso vive en su propio directorio versionado, con dependencias aisladas y su propio entorno virtual local (`.venv`).
 
 ```text
 .
-├── .python-version
-├── .venv/
-├── pyproject.toml
-├── uv.lock
-├── data/
-└── *.ipynb
+└── 01-data-preprocessing/
 ```
 
-## Fuente de verdad del proyecto
+## Cursos disponibles
 
-La configuración oficial del entorno vive en:
+1. [`01-data-preprocessing`](./01-data-preprocessing/) — Python, pandas, NumPy, EDA y manejo de archivos.
 
-- `pyproject.toml`
-- `uv.lock`
+## Convenciones del monorepo
 
-`requirements.txt` ya no forma parte del flujo recomendado.
+- Cada curso administra su entorno con `uv` dentro de su carpeta.
+- Cada curso puede tener su propio `.python-version`, `pyproject.toml` y `uv.lock`.
+- Los entornos `.venv/` de cualquier curso se ignoran desde la raíz del repo.
 
-## Flujo recomendado
+## Cómo trabajar en un curso
 
-### Diario
+Entrá al directorio del curso y seguí su `README.md`.
+
+Ejemplo:
 
 ```bash
+cd 01-data-preprocessing
 uv sync --dev
 uv run jupyter lab
-uv run ruff check .
-```
-
-### Mantenimiento
-
-```bash
-uv run pip-audit --local
-uv lock --upgrade
-uv sync --dev
 ```
