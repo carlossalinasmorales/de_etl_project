@@ -1,4 +1,30 @@
-.venv
-.ipynb_checkpoints/
-!data/output/.gitkeep
+.venv/
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# OS/editor noise
+.DS_Store
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+
+# Keep generated-output folder structure
+!data/output/.gitkeep

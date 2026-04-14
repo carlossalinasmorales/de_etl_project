@@ -1,7 +1,7 @@
 [project]
 name = "02-data-algorithms"
 version = "0.1.0"
-description = "Add your description here"
+description = "Módulo de práctica de análisis algorítmico en notebooks de Jupyter."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

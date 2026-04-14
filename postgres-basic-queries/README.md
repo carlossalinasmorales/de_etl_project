@@ -34,7 +34,7 @@ Los scripts muestran capacidad para:
 .
 ├── 01_analisis_catalogo.sql
 ├── 02_comunicacion_con_clientes.sql
-├── 03_audotoria_inventario.sql
+├── 03_auditoria_inventario.sql
 └── README.md
 ```
 
@@ -60,7 +60,7 @@ Los scripts muestran capacidad para:
 | --- | --- | --- |
 | `01_analisis_catalogo.sql` | Filtrar películas por descripción y duración, priorizando por tarifa. | `WHERE`, `ILIKE`, `BETWEEN`, `ORDER BY`, `LIMIT` |
 | `02_comunicacion_con_clientes.sql` | Obtener clientes que rentaron películas en una fecha específica. | `INNER JOIN`, `CAST`, filtrado por fecha |
-| `03_audotoria_inventario.sql` | Detectar películas registradas sin inventario disponible. | `LEFT JOIN`, `NULL`, auditoría de datos |
+| `03_auditoria_inventario.sql` | Detectar películas registradas sin inventario disponible. | `LEFT JOIN`, `NULL`, auditoría de datos |
 
 ## Sample Queries
 
@@ -120,4 +120,4 @@ Este proyecto demuestra fundamentos que importan en cualquier entorno de datos:
 
 - Los archivos están pensados como práctica progresiva de SQL.
 - El foco está en fundamentos relacionales, no en optimización avanzada.
-- El nombre del archivo `03_audotoria_inventario.sql` conserva el naming original del ejercicio, aunque en la documentación se presenta como **Auditoría de inventario**.
+- El script `03_auditoria_inventario.sql` mantiene consistencia de naming con el resto de los ejercicios del módulo.
