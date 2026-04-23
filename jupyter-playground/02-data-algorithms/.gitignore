@@ -26,5 +26,8 @@ htmlcov/
 .vscode/*
 !.vscode/settings.json
 
-# Large local datasets
-data/raw/FakeNews.csv
+# Local data directories (keep folders, ignore contents)
+data/raw/*
+!data/raw/.gitkeep
+data/output/*
+!data/output/.gitkeep

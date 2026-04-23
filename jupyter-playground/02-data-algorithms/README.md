@@ -7,7 +7,7 @@ Módulo de práctica para análisis de algoritmos y estructuras de datos usando 
 
 ## Executive Summary
 
-Este track documenta ejercicios introductorios para razonar sobre tiempos de ejecución, estructuras de datos y hashing en formato notebook.
+Este track documenta ejercicios introductorios para razonar sobre tiempos de ejecución, estructuras de datos, hashing y grafos en formato notebook.
 
 Actualmente incluye:
 
@@ -17,6 +17,8 @@ Actualmente incluye:
 - `03-arboles.ipynb`
 - `04-hashing.ipynb`
 - `04-actividad-hashing.ipynb`
+- `05-grafos.ipynb`
+- `05-actividad-grafos.ipynb`
 
 ## Tech Stack
 
@@ -32,11 +34,13 @@ Actualmente incluye:
 ├── 03-arboles.ipynb
 ├── 04-hashing.ipynb
 ├── 04-actividad-hashing.ipynb
+├── 05-grafos.ipynb
+├── 05-actividad-grafos.ipynb
 ├── data/
+│   ├── output/
+│   │   └── .gitkeep
 │   └── raw/
-│       ├── amazon_sales.csv
-│       ├── tweets.csv
-│       └── uber.csv
+│       └── .gitkeep
 ├── pyproject.toml
 ├── uv.lock
 ├── .gitignore
@@ -60,6 +64,5 @@ El análisis algorítmico es parte del criterio técnico: ayuda a decidir soluci
 ## Notes
 
 - Este módulo prioriza práctica conceptual con notebooks progresivos por tema.
-- Los datasets versionados viven en `data/raw/`.
-- `data/raw/FakeNews.csv` se mantiene fuera del repo porque excede el límite de tamaño de GitHub y quedó ignorado localmente.
+- Los directorios `data/raw/` y `data/output/` se preservan con `.gitkeep`, pero su contenido de trabajo queda fuera del repo.
 - La dependencia declarada actualmente es `ipykernel`.
